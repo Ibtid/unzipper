@@ -23,6 +23,9 @@ app.use((req, res, next) => {
 //routes
 app.use('/api/', chaptersRoutes);
 
-app.listen(5000, () => {
-  console.log('Server running in port 5000');
+app.get("/", (req, res) => {
+  res.send("Unzip Api is running")
+})
+app.listen(5001, () => {
+  console.log('Server running in port 5001');
 });
